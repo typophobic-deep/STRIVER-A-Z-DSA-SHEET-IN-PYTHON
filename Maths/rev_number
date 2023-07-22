@@ -1,0 +1,10 @@
+n=int(input("enter numer"))
+y = str(abs(n))
+y = y[::-1]
+output=int(y)
+if output> pow(2,31)-1 or output< -2**31:
+    print("outside range")     #here for leetcode return0
+elif n<0:
+    print(-1*output) 
+else:
+    print(output)   
