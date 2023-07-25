@@ -1,0 +1,22 @@
+n=int(input("enter you numer :"))
+v=[]
+num=0
+two=1
+N=n
+if N==0:
+    print(1)
+while(N):
+    bit=N%2
+    v.append(bit)
+    N=N//2
+    v.reverse()    
+for i in range(len(v)):
+    if v[i]==0:
+        v[i]=1
+    else:
+        v[i]=0
+        
+for i in range(len(v)-1,-1,-1):
+    N = N + v[i] * two
+    two=two*2
+print(N)   
