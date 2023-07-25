@@ -10,3 +10,4 @@ class Solution:
             else:
                 B=B-A
         return A   
+''' ok        
