@@ -1,0 +1,16 @@
+class Solution:        
+    def primeRange(self,M,N):
+        def isPrime(num):
+            if(num<2):
+                return False
+            for i in range(2,int(num**0.5)+1):
+                if(num%i==0):
+                    return False
+            return True
+        lst=[]
+        if M==1:
+            M+=1 # this line is written as m will be one than we want to start the search by 2 as 1 is not a prime number
+        for i in range(M,N+1):
+            if isPrime(i):
+                lst.append(i)
+        return lst      
